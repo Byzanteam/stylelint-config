@@ -1,0 +1,31 @@
+{
+  "name": "@byzanteam/stylelint-config",
+  "version": "0.1.0",
+  "description": "Byzanteam sharable config for stylelint",
+  "main": "index.js",
+  "scripts": {},
+  "author": "vanppo <vanppo@hotmail.com>",
+  "license": "ISC",
+  "keywords": [
+    "stylelint",
+    "stylelint-config"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanppo/stylelint-config-byzanteam.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vanppo/stylelint-config-byzanteam/issues"
+  },
+  "homepage": "https://github.com/vanppo/stylelint-config-byzanteam#readme",
+  "dependencies": {
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-scss": "^3.5.4"
+  },
+  "devDependencies": {
+    "stylelint": "^10.0.0"
+  },
+  "peerDependencies": {
+    "stylelint": "^8.3.0 || ^9.0.0 || ^10.0.0"
+  }
+}
