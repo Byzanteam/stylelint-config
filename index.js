@@ -1,9 +1,12 @@
+const order = require('./order')
+
 module.exports = {
   extends: [
     'stylelint-config-standard',
   ],
   plugins: [
     'stylelint-scss',
+    'stylelint-order',
   ],
   rules: {
     'at-rule-empty-line-before': null,
@@ -46,5 +49,19 @@ module.exports = {
     'scss/operator-no-unspaced': true,
     'scss/selector-no-redundant-nesting-selector': true,
     'scss/no-duplicate-dollar-variables': true,
+    // Rules from stylelint-order
+    'order/order': [
+      [
+        'dollar-variables',
+        'custom-properties',
+        'at-rules',
+        'declarations',
+        'rules',
+      ],
+      {
+        unspecified: 'bottom',
+      },
+    ],
+    'order/properties-order': order,
   },
 }
