@@ -1,0 +1,23 @@
+version: v1.0
+
+name: stylelint-config
+
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+
+blocks:
+  - name: Publish package
+    task:
+      secrets:
+        - name: fe-library
+      prologue:
+        commands:
+          - checkout
+          - nvm use lts/*
+      jobs:
+        - name: client npm install and cache
+          commands:
+            - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+            - npm publish --access=public
