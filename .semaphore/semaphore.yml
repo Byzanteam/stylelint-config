@@ -5,10 +5,11 @@ name: stylelint-config
 agent:
   machine:
     type: e1-standard-2
-    os_image: ubuntu1804
 
 blocks:
-  - name: Publish package
+  - name: Publish
+    skip:
+      when: branch != 'master'
     task:
       secrets:
         - name: fe-library
@@ -17,7 +18,7 @@ blocks:
           - checkout
           - nvm use lts/*
       jobs:
-        - name: client npm install and cache
+        - name: Publish stylelint-config
           commands:
             - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
             - npm publish --access=public
