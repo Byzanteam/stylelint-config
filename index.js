@@ -54,14 +54,25 @@ module.exports = {
       [
         'dollar-variables',
         'custom-properties',
-        'at-rules',
+        {
+          type: 'at-rule',
+          name: 'extend',
+          hasBlock: false,
+        },
         'declarations',
+        'at-rules',
         'rules',
       ],
       {
         unspecified: 'bottom',
       },
     ],
-    'order/properties-order': order,
+    'order/properties-order': [
+      order,
+      {
+        unspecified: 'bottomAlphabetical',
+        emptyLineBeforeUnspecified: 'always',
+      },
+    ],
   },
 }

@@ -5,19 +5,20 @@ name: stylelint-config
 agent:
   machine:
     type: e1-standard-2
-    os_image: ubuntu1804
+  containers:
+  - name: main
+    image: semaphoreci/node:10.16
 
 blocks:
-  - name: Publish package
+  - name: Publish
+    skip:
+      when: tag !~ '.*'
     task:
       secrets:
         - name: fe-library
-      prologue:
-        commands:
-          - checkout
-          - nvm use lts/*
       jobs:
-        - name: client npm install and cache
+        - name: Publish
           commands:
+            - checkout
             - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
             - npm publish --access=public
