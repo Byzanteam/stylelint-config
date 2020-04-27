@@ -1,6 +1,6 @@
 {
   "name": "@byzanteam/stylelint-config",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Byzanteam sharable config for stylelint",
   "main": "index.js",
   "scripts": {},
@@ -12,14 +12,14 @@
   "repository": "https://github.com/Byzanteam/stylelint-config.git",
   "license": "ISC",
   "dependencies": {
-    "stylelint-config-standard": "^18.3.0",
-    "stylelint-order": "^3.0.0",
-    "stylelint-scss": "^3.8.0"
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.0.0",
+    "stylelint-scss": "^3.17.1"
   },
   "devDependencies": {
-    "stylelint": "^10.1.0"
+    "stylelint": "^13.3.3"
   },
   "peerDependencies": {
-    "stylelint": "^10.0.0"
+    "stylelint": "^13.3.3"
   }
 }
