@@ -13,13 +13,13 @@
   "license": "ISC",
   "dependencies": {
     "stylelint-config-standard": "^20.0.0",
-    "stylelint-order": "^4.0.0",
+    "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.17.1"
   },
   "devDependencies": {
-    "stylelint": "^13.3.3"
+    "stylelint": "^13.13.0"
   },
   "peerDependencies": {
-    "stylelint": "^13.3.3"
+    "stylelint": "^13.13.0"
   }
 }
